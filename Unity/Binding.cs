@@ -32,6 +32,7 @@ namespace UniVM
     {
       this.Property = base.Property as TProperty;
       Property.OnChange += OnPropertyChange;
+      OnPropertyChange();
     }
 
     void OnDestroy()

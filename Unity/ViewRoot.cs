@@ -16,6 +16,9 @@ namespace UniVM
 
         foreach(var binding in GetComponentsInChildren<Binding>())
           binding.Property = Context.FindProperty(binding.Path);
+
+        foreach(var binding in GetComponentsInChildren<EventBinding>())
+          binding.Event = Context.FindMethod(binding.Path);
       }
     }
   }
